@@ -243,7 +243,7 @@ CalcLAI = function(fractions, width = 6){
 
   if(width < 0 | width > 6) width = 6
   T = rep(0,5)
-  for(i in -width:width) T = T + gap.fractions[angle + i]
+  for(i in -width:width) T = T + fractions[angle + i]
   T = T/(2*width +1)
 
   LAI      = 2 * sum(-log(T) * wi * cos(angle*deg2rad))
